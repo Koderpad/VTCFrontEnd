@@ -1,17 +1,18 @@
-import styled from "styled-components";
-import GlobalStyled from "./styles/GlobalStyles";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const TestStyledCom = styled.div`
-  background-color: var(--color-yellow-100);
-  text-align: center;
-`;
+import GlobalStyled from "./styles/GlobalStyles";
+import Login from "./pages/Login";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
+      <Routes>
+        <Route path="login" element={<Login />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
       <GlobalStyled />
-      <TestStyledCom>Hello</TestStyledCom>
-    </>
+    </BrowserRouter>
   );
 }
 
