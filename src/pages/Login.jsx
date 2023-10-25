@@ -11,7 +11,7 @@ function Login() {
         </LeftSection>
         <RightSection>
           <Label_welcome title="welcome">Welcome</Label_welcome>
-          <Label_welcome title="loginWE">Login with Email</Label_welcome>
+          <Label_welcome title="loginWE">Login with Username</Label_welcome>
           <LoginForm />
         </RightSection>
       </LoginPageContainer>
@@ -19,10 +19,10 @@ function Login() {
   );
 }
 
-// Styled Components cho các phần tử
 const LoginPageContainer = styled.div`
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
+  height: auto;
   /* width: 1366px;
   height: 768px; */
   /* border-radius: 0px; */
@@ -35,7 +35,7 @@ const LeftSection = styled.div`
   opacity: 0.9;
   background-size: cover;
   background-position: center;
-  opacity: 0.9;
+  /* opacity: 0.9; */
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 `;
 

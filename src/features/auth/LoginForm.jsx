@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import Button from "../../ui/Button";
 import Form from "../../ui/Form";
 import FormRowVertical from "../../ui/FormRowVertical";
 import Input from "../../ui/Input";
-import { Label_welcome } from "../../pages/Login";
 import { Link } from "react-router-dom";
 
 function LoginForm() {
@@ -12,20 +10,20 @@ function LoginForm() {
   }
   return (
     <Form onSubmit={handleSubmit}>
-      <FormRowVertical label="Email Id">
+      <FormRowVertical label="Tên đăng nhập">
         <Input
           type="email"
           id="email"
           icon="/public/sms.png"
-          placeholder="Email"
+          placeholder="Tên đăng nhập | Username"
         />
       </FormRowVertical>
-      <FormRowVertical label="Password">
+      <FormRowVertical label="Mật khẩu">
         <Input
           type="password"
           id="password"
           icon="/public/lock.png"
-          placeholder="Password"
+          placeholder="Mật khẩu | Password"
         />
       </FormRowVertical>
 
@@ -56,6 +54,7 @@ const Label_Regis = styled.div`
   flex-direction: column-reverse;
   justify-content: space-around;
   margin-left: 70px;
+  padding-bottom: 30px;
 
   & .don-t-have-account {
     color: #000000;
