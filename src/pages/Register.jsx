@@ -1,5 +1,5 @@
-import RegistrationForm from "../features/auth/RegistrationForm";
-import Logo_fix from "../ui/Logo-fix";
+import Register_rightSide from "./Register_rightSide";
+import Logo_fix from "../components/ui-styled/Logo-fix";
 
 function Register() {
   return (
@@ -9,7 +9,7 @@ function Register() {
         <Logo_fix />
       </div>
       <div className="tw-w-1/2">
-        <RegistrationForm />
+        <Register_rightSide />
       </div>
     </div>
   );

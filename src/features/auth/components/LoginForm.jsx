@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Form from "../../ui/Form";
-import FormRowVertical from "../../ui/FormRowVertical";
-import Input from "../../ui/Input";
+import Form from "../../../components/ui-styled/Form";
+import FormRowVertical from "../../../components/ui-styled/FormRowVertical";
+import Input from "../../../components/ui-styled/Input";
 import { Link } from "react-router-dom";
 
 function LoginForm() {

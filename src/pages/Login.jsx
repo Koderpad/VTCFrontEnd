@@ -1,6 +1,6 @@
-import LoginForm from "../features/auth/LoginForm";
 import styled, { css } from "styled-components";
-import Logo from "../ui/Logo";
+import Logo from "../components/ui-styled/Logo";
+import LoginForm from "../features/auth/components/LoginForm";
 
 function Login() {
   return (

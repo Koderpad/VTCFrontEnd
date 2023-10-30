@@ -1,4 +1,4 @@
-import TextIcon from "../../ui/TextIcon";
+import TextIcon from "../../../components/ui/TextIcon";
 import { useState } from "react";
 
 function RegisForm_fix() {

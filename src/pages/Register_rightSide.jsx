@@ -1,6 +1,6 @@
-import RegisForm_fix from "./RegisForm_fix";
+import RegisForm_fix from "../features/auth/components/RegisForm_fix";
 
-function RegistrationForm() {
+function Register_rightSide() {
   return (
     // <section className="tw-border tw-bg-cyan-100 tw-grow tw-w-full tw-mx-auto tw-px-5 tw-border-solid tw-border-neutral-700 tw-max-md:max-w-full">
     <div className="tw-flex tw-max-md:flex-col tw-max-md:items-stretch tw-max-md:gap-0">
@@ -57,4 +57,4 @@ function RegistrationForm() {
   );
 }
 
-export default RegistrationForm;
+export default Register_rightSide;
