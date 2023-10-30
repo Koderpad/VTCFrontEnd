@@ -2,3 +2,4 @@
 
 Chức năng:
 + Login
++ Register
