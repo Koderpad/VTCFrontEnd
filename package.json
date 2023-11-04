@@ -11,12 +11,14 @@
   },
   "dependencies": {
     "react": "^18.2.0",
+    "react-datepicker": "^4.21.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0",
     "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
+    "@types/react-datepicker": "^4.19.1",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.16",
