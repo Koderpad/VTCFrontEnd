@@ -2,8 +2,15 @@ import Breadcrumb from "../components/ui/Breadcrumb";
 import Footer_v1 from "../layouts/footers/Footer_v1";
 import Header_not_fixed from "../layouts/headers/Header_not_fixed";
 import { Link, Outlet } from "react-router-dom";
+import {RootState} from "../app/store.js";
+import {useSelector} from "react-redux";
 
 function MyAccount() {
+
+  const state = useSelector((state) => state.auth.user)
+  const username = state.username
+
+
   return (
     <div className="tw-grid tw-grid-rows-auto">
       <Header_not_fixed />
@@ -45,7 +52,7 @@ function MyAccount() {
         {/* right content side */}
         <div className="tw-flex tw-flex-col tw-w-[1020px] tw-h-[568px]">
           {/* welcome */}
-          <div className="tw-self-end">Xin chào, ngquoctrung0099</div>
+          <div className="tw-self-end">Xin chào, {username}</div>
 
           {/* content */}
           <div className="tw-h-full tw-mt-11 tw-pl-16 ">

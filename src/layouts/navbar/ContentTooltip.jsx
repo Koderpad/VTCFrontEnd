@@ -1,4 +1,24 @@
+import { Link } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { logOut } from "../../features/auth/authSlice.js";
+import { persistor } from "../../app/store.js";
+
 function ContentTooltip() {
+  // Trong component của bạn
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    // await dispatch(logOut());
+    //chueyern trang login
+    navigate("/login");
+
+    //xoa state
+    // await persistor.purge();
+  };
+
   return (
     <>
       <div className="tw-absolute tw-w-64 tw-left-0 tw-ml-none tw-shadow-lg tw-bg-white tw-rounded">
@@ -12,7 +32,7 @@ function ContentTooltip() {
             <a href="#">Đơn mua</a>
           </li>
           <li className="tw-py-2 tw-pl-4 tw-text-2xl tw-text-gray-800 hover:tw-text-green-600 hover:tw-bg-gray-200 tw-cursor-pointer tw-transition tw-duration-300 tw-ease-in-out">
-            <a href="#">Đăng xuất</a>
+            <Link onClick={handleLogout}>Đăng xuất</Link>
           </li>
         </ul>
         {/* <a>Hi</a>

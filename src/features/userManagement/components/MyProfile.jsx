@@ -2,9 +2,17 @@ import { useState } from "react";
 import DatePickerAsSingle from "../../../components/form/DatePickerAsSingle";
 import CustomInput from "../../../components/ui/Label-Input_EditProfile";
 import ModalSaveInf from "../../../components/ui/ModalSaveInf";
+import { useUser } from "../hooks/useUser.jsx";
+import { useGetUserQuery, useLogin2Query } from "../services/userApi.js";
 
 function MyProfile() {
   const [open, setOpen] = useState(false);
+
+  console.log("dùng query để lấy user sau khi ....");
+  const { data } = useLogin2Query();
+  if (data) console.log("data: ", data);
+  else console.log("data: null");
+
   return (
     <>
       <div className="tw-bg-green-600 tw-w-full tw-h-full">
@@ -21,6 +29,14 @@ function MyProfile() {
                     labelFor="name"
                     inputId="name"
                     inputType="text"
+                    inputValue={
+                      data?.customerDTO?.fullName
+                        ? data.customerDTO.fullName
+                        : ""
+                    }
+                    handleInputChange={(event) =>
+                      console.log(event.target.value)
+                    }
                   />
                   <CustomInput
                     labelText="Email"

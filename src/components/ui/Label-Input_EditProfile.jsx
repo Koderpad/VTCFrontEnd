@@ -1,4 +1,4 @@
-const CustomInput = ({ labelText, labelFor, inputId, inputType }) => {
+const CustomInput = ({ labelText, labelFor, inputId, inputType,inputValue, handleInputChange }) => {
   return (
     <div className="tw-block tw-w-full tw-mb-4">
       <label className="tw-block tw-text-gray-700 tw-mb-2" htmlFor={labelFor}>
@@ -9,6 +9,8 @@ const CustomInput = ({ labelText, labelFor, inputId, inputType }) => {
         id={inputId}
         name={inputId}
         type={inputType}
+        value={inputValue}
+        onChange={handleInputChange}
       />
     </div>
   );
